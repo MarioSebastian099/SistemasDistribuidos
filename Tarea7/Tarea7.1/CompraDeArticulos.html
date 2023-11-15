@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Compra de articulos</title>
+        <link rel="stylesheet" type="text/css" href="Compra.css">
+        <script src="Compra.js"></script>
+</body>
+    </head>
+    <body>
+        <div class="purchase-screen">
+            <h2>Compra de artículos</h2>
+            <form>
+              <label for="searchInput">Buscar:</label>
+              <input type="text" id="searchInput" placeholder="Ingrese una palabra clave">
+              <button id="searchButton" type="submit">Buscar</button>
+            </form>
+            <div id="searchResults"></div>
+            <div id="cartButtonContainer">
+              <button id="cartButton">Carrito de compra</button>
+            </div>
+          </div>
+          
+          <div id="itemDescriptionModal" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <h3 id="itemDescriptionTitle"></h3>
+              <p id="itemDescription"></p>
+            </div>
+          </div>
+          <button id="closeCartButton">Cerrar carrito</button>
+          <button id="closeDescriptionButton">Cerrar descripcion</button>
+          <button id="removeCartButton">Eliminar carro</button>
+
+          <div id="cartModal" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <h3>Artículos en el carrito</h3>
+              <div id="cartItems"></div>
+              <div id="cartTotalContainer">
+                <span>Total:</span>
+                <span id="cartTotal"></span>
+              </div>
+              <button id="clearCartButton">Eliminar carrito de compra</button>
+              <button id="continueShoppingButton">Seguir comprando</button>
+            </div>
+          </div>
+    </body>
+</html>

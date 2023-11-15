@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Carrito de Compras</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div class="menu">
+    <button onclick="showCaptureScreen()">Captura de artículo</button>
+    <button onclick="showPurchaseScreen()">Compra de artículos</button>
+  </div>
+
+  <div id="captureScreen" class="screen hidden">
+    <h2>Captura de artículos</h2>
+    <form>
+      <label for="itemName">Nombre del artículo:</label>
+      <input type="text" id="itemName" required><br>
+
+      <label for="itemDescription">Descripción del artículo:</label>
+      <input type="text" id="itemDescription" required><br>
+
+      <label for="itemPrice">Precio:</label>
+      <input type="number" id="itemPrice" required><br>
+
+      <label for="itemQuantity">Cantidad en almacén:</label>
+      <input type="number" id="itemQuantity" required><br>
+
+      <label for="itemPhoto">Fotografía:</label>
+      <input type="file" id="itemPhoto" accept="image/*" required><br>
+
+      <button type="button" onclick="saveItem()">Guardar</button>
+    </form>
+  </div>
+
+  <div id="purchaseScreen" class="screen hidden">
+    <h2>Compra de artículos</h2>
+    <input type="text" id="searchInput" placeholder="Buscar artículo...">
+    <button type="button" onclick="searchItems()">Buscar</button>
+
+    <div id="searchResults"></div>
+
+    <button onclick="showCart()">Carrito de compra</button>
+  </div>
+
+  <div id="cartScreen" class="screen hidden">
+    <h2>Artículos en el carrito</h2>
+    <div id="cartItems"></div>
+
+    <h3>Total de la compra: <span id="cartTotal">$0</span></h3>
+
+    <button onclick="clearCart()">Eliminar carrito de compra</button>
+    <button onclick="showPurchaseScreen()">Seguir comprando</button>
+  </div>
+<!-- <div id="descriptionModal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2 id="modalTitle"></h2>
+      <p id="modalDescription"></p>
+    </div>
+  </div>-->
+  
+
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Carrito de Compras - Captura de artículos</title>
+  <link rel="stylesheet" type="text/css" href="stylesCaptura.css">
+</head>
+<body>
+  <h1>Captura de articulos</h1>
+
+  <div id ="container"class="capture-screen">
+    <h2>Captura de artículos</h2>
+
+    <form>
+      <label for="nombre">Nombre del artículo:</label>
+      <input type="text" id="nombre" required>
+
+      <label for="descripcion">Descripción del artículo:</label>
+      <textarea id="descripcion" required></textarea>
+
+      <label for="precio">Precio:</label>
+      <input type="number" id="precio" required>
+
+      <label for="cantidad">Cantidad en almacén:</label>
+      <input type="number" id="cantidad" required>
+
+      <label for="foto">Fotografía del artículo:</label>
+      <input type="file" id="foto" accept="image/*" required>
+
+      <button type="submit">Agregar artículo</button>
+    </form>
+  </div>
+
+  <script src="Cliente.js"></script>
+</body>
+</html>

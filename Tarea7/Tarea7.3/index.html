@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Carrito de Compras</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <div id="menu">
+    <button onclick="showCaptureScreen()">Captura de artículo</button>
+    <button onclick="showPurchaseScreen()">Compra de artículos</button>
+  </div>
+
+  <div id="captureScreen" class="hidden">
+    <h2>Captura de artículos</h2>
+    <input type="text" id="itemName" placeholder="Nombre del artículo">
+    <input type="text" id="itemDescription" placeholder="Descripción del artículo">
+    <input type="number" id="itemPrice" placeholder="Precio">
+    <input type="number" id="itemQuantity" placeholder="Cantidad en almacén">
+    <input type="text" id="itemPhoto" placeholder="URL de la fotografía">
+    <button onclick="saveItem()">Guardar artículo</button>
+  </div>
+
+  <div id="purchaseScreen" class="hidden">
+    <h2>Compra de artículos</h2>
+    <input type="text" id="searchInput" placeholder="Buscar artículo">
+    <button onclick="searchItems()">Buscar</button>
+    <div id="searchResults"></div>
+  </div>
+
+  <div id="cartScreen" class="hidden">
+    <h2>Artículos en el carrito</h2>
+    <div id="cartItems"></div>
+    <p>Total: <span id="cartTotal">$0</span></p>
+    <button onclick="clearCart()">Eliminar carrito de compra</button>
+    <button onclick="showPurchaseScreen()">Seguir comprando</button>
+  </div>
+
+  <div id="descriptionModal" class="modal hidden">
+    <div class="modal-content">
+      <h2 id="modalTitle"></h2>
+      <p id="modalDescription"></p>
+      <button onclick="closeModal()">Cerrar</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
